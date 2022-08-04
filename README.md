@@ -12,11 +12,14 @@ This demodata is a part of `new_york.citibike_trips` data in bigquery public dat
 
 ## How to apply
 ```bash
+gcloud config set project ${YOUR PROJECT ID}
+
 export TF_VAR_PROJECT_ID=YOUR_PROJECT_ID
 export TF_VAR_ADMIN_USER=YOUR_GCP_ADMIN_USER
 export TF_VAR_S3_DATA_PATH=YOUR_AWS_S3_CSV_FILE_PATH
 export TF_VAR_S3_ACCESS_KEY_ID=YOUR_AWS_S3_ACCESS_KEY
 export TF_VAR_S3_SECRET_ACCESS_KEY=YOUR_AWS_S3_SECRET_ACCESS_KEY
+export TF_VAR_GCS_BUCKET_NAME=YOUR_GCS_BUCKET_NAME
 
 terraform init
 terraform plan
